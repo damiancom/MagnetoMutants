@@ -37,7 +37,7 @@ public class AnalyzerGTS implements Analyzer {
         this.last = 0;
         root = new Tree();
 
-        var sequences = getSequences(dna);
+        List<String> sequences = getSequences(dna);
 
         for (int i = 0; i < sequences.size(); i++) {
             this.put(sequences.get(i), i);
