@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NitrogenBaseTest {
 
     @Test
-    void valuesIsPresents() {
+    void test_values_not_null_NitrogenBase_ok() {
         assertNotNull(NitrogenBase.A);
         assertNotNull(NitrogenBase.C);
         assertNotNull(NitrogenBase.G);
