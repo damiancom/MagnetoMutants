@@ -225,7 +225,7 @@ public class AnalyzerGTS implements Analyzer {
 
             String label = g.getLabel();
             if (label.length() > str.length() && label.charAt(str.length()) == t) {
-                return new Touple<>(true, s);
+                return new Touple<>(Boolean.TRUE, s);
             } else {
                 String newlabel = label.substring(str.length());
                 assert (label.startsWith(str));
@@ -238,19 +238,19 @@ public class AnalyzerGTS implements Analyzer {
                 r.addEdge(newlabel.charAt(0), g);
                 s.addEdge(str.charAt(0), newedge);
 
-                return new Touple<>(false, r);
+                return new Touple<>(Boolean.FALSE, r);
             }
 
         } else {
             Node e = s.getEdge(t);
             if (null == e) {
-                return new Touple<>(false, s);
+                return new Touple<>(Boolean.FALSE, s);
             } else {
                 if (remainder.equals(e.getLabel())) {
                     e.getDest().addRef(value);
-                    return new Touple<>(true, s);
+                    return new Touple<>(Boolean.TRUE, s);
                 } else if (remainder.startsWith(e.getLabel())) {
-                    return new Touple<>(true, s);
+                    return new Touple<>(Boolean.TRUE, s);
                 } else if (e.getLabel().startsWith(remainder)) {
                     Tree newTree = new Tree();
                     newTree.addRef(value);
@@ -263,9 +263,9 @@ public class AnalyzerGTS implements Analyzer {
 
                     s.addEdge(t, newNode);
 
-                    return new Touple<>(false, s);
+                    return new Touple<>(Boolean.FALSE, s);
                 } else {
-                    return new Touple<>(true, s);
+                    return new Touple<>(Boolean.TRUE, s);
                 }
             }
         }

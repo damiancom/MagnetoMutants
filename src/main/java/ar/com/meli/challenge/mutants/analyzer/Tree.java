@@ -87,9 +87,9 @@ public class Tree {
             else if (midVal > index)
                 high = mid - 1;
             else
-                return true;
+                return Boolean.TRUE;
         }
-        return false;
+        return Boolean.FALSE;
     }
 
     void addEdge(char ch, Node e) {
