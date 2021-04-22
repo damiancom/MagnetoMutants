@@ -29,8 +29,8 @@ Deberá clonarse el repositorio y, situado sobre la raíz del proyecto, lanzar e
 
 ## __API URLs__
 
-### Desarrollo: http://localhost:8080
-### Producción: http://ec2-3-141-1-63.us-east-2.compute.amazonaws.com:8080
+### Desarrollo: http://localhost:8080/v1/api
+### Producción: http://ec2-3-141-1-63.us-east-2.compute.amazonaws.com:8080/v1/api
 
 ## __Servicios publicados__
 
