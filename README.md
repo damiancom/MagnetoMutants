@@ -29,8 +29,8 @@ Deberá clonarse el repositorio y, situado sobre la raíz del proyecto, lanzar e
 
 ## __API URLs__
 
-### Desarrollo: http://localhost:8080/v1/api
-### Producción: http://ec2-3-141-1-63.us-east-2.compute.amazonaws.com:8080/v1/api
+### Desarrollo: http://localhost:8080/
+### Producción: http://ec2-3-141-1-63.us-east-2.compute.amazonaws.com:8080/
 
 ## __Servicios publicados__
 
@@ -57,9 +57,9 @@ POST /v1/api/mutants
 200 OK 
 ```
 
-### /atats - Retorna las estadísticas de los humanos verificados, dando cantidades y el ratio de mutantes encontrados
+### /stats - Retorna las estadísticas de los humanos verificados, dando cantidades y el ratio de mutantes encontrados
 ``` 
-GET /v1/api/atats 
+GET /v1/api/stats 
 ``` 
 
 #### Response
